@@ -1,0 +1,11 @@
+name: wine_project
+
+conda_env: conda.yaml
+
+entry_points:
+  main:
+    parameters:
+      model_name: string
+      alpha: float
+      l1_ratio: {type: float, default: 0.1}
+    command: "python model/wine_model_train.py {model_name} {alpha} {l1_ratio}"
